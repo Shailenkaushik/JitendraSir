@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+
+	<flow name="configuration_fileFlow" doc:id="303e9802-c1f1-4b57-9988-f30fb1bc1868" >
+		<http:listener doc:name="Listener" doc:id="00104f53-17c0-4a02-b0a8-e141dd434383" config-ref="HTTP_Listener_config" path="testing"/>
+		<logger level="INFO" doc:name="Logger" doc:id="bb1b1977-8e5b-44e9-9bc7-d82128159ae9" message="${secure::shailen.pass}"/>
+	</flow>
+</mule>
